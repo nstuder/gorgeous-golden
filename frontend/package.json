@@ -1,0 +1,43 @@
+{
+  "name": "frontend",
+  "version": "1.0.0",
+  "private": true,
+  "description": "frontend",
+  "author": "Niklas Studer",
+  "keywords": [
+    "gatsby"
+  ],
+  "scripts": {
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
+  },
+  "dependencies": {
+    "@googlemaps/react-wrapper": "^1.1.20",
+    "@headlessui/react": "^1.4.2",
+    "@heroicons/react": "^1.0.5",
+    "@tailwindcss/typography": "^0.4.1",
+    "autoprefixer": "^10.4.0",
+    "dotenv": "^8.6.0",
+    "gatsby": "^4.2.0",
+    "gatsby-plugin-image": "^2.2.0",
+    "gatsby-plugin-manifest": "^4.2.0",
+    "gatsby-plugin-react-helmet": "^5.2.0",
+    "gatsby-plugin-sass": "^5.2.0",
+    "gatsby-plugin-sharp": "^4.2.0",
+    "gatsby-plugin-sitemap": "^5.2.0",
+    "gatsby-remark-images": "^6.3.0",
+    "gatsby-source-filesystem": "^4.2.0",
+    "gatsby-source-strapi": "^1.0.2",
+    "gatsby-transformer-remark": "^5.3.0",
+    "gatsby-transformer-sharp": "^4.2.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-helmet": "^6.1.0",
+    "react-markdown": "^7.1.1",
+    "sass": "^1.43.4",
+    "tailwindcss": "^2.2.19"
+  }
+}
