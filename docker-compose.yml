@@ -1,0 +1,41 @@
+---
+version: '3'
+
+services:
+  gorgeous-golden:
+    image: backend
+    restart: always
+    env_file:
+      - .env
+    ports:
+      - 8000:80
+    volumes:
+      - strapipublic:/app/cms/public/uploads
+    depends_on:
+      - mariadb
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.gorgeous-golden.rule=Host(`dev.gorgeous-golden.de`)"
+      - "traefik.http.routers.gorgeous-golden.entrypoints=web"
+    networks:
+      - default
+      - traefik
+
+  mariadb:
+    image: mariadb
+    restart: always
+    volumes:
+      - mysqldbvolume:/var/lib/mysql
+    env_file:
+      - .env
+
+# Volumes
+volumes:
+  mysqldbvolume:
+    driver: local
+  strapipublic:
+    driver: local
+
+networks:
+  traefik:
+    external: true

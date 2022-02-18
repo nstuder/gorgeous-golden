@@ -1,0 +1,12 @@
+frontend/.npm/*
+frontend/public/*
+cms/.npm/*
+cms/.tmp/*
+cms/build/*
+cms/public/uploads/*
+.git
+**/.cache
+**/bin
+**/node_modules
+**/obj
+**/*.tar
