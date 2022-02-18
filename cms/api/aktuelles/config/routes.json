@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/aktuelles",
+      "handler": "aktuelles.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/aktuelles/count",
+      "handler": "aktuelles.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/aktuelles/:id",
+      "handler": "aktuelles.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/aktuelles",
+      "handler": "aktuelles.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/aktuelles/:id",
+      "handler": "aktuelles.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/aktuelles/:id",
+      "handler": "aktuelles.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

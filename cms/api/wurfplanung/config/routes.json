@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/wurfplanung",
+      "handler": "wurfplanung.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/wurfplanung",
+      "handler": "wurfplanung.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/wurfplanung",
+      "handler": "wurfplanung.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

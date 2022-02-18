@@ -1,0 +1,20 @@
+{
+  "kind": "singleType",
+  "collectionName": "contact",
+  "info": {
+    "name": "Kontakt",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "text": {
+      "type": "richtext",
+      "required": true
+    }
+  }
+}

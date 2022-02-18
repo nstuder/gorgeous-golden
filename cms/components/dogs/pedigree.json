@@ -1,0 +1,87 @@
+{
+  "collectionName": "components_dogs_pedigrees",
+  "info": {
+    "name": "pedigree",
+    "icon": "address-card",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "mother": {
+      "type": "string",
+      "required": true
+    },
+    "father": {
+      "type": "string",
+      "required": true
+    },
+    "motherImg": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true,
+      "pluginOptions": {}
+    },
+    "fatherImg": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true,
+      "pluginOptions": {}
+    },
+    "fatherFather": {
+      "type": "string",
+      "required": true
+    },
+    "motherMother": {
+      "type": "string",
+      "required": true
+    },
+    "motherMotherMother": {
+      "type": "string",
+      "required": true
+    },
+    "fatherFatherFather": {
+      "type": "string",
+      "required": true
+    },
+    "motherFather": {
+      "type": "string",
+      "required": true
+    },
+    "fatherMother": {
+      "type": "string",
+      "required": true
+    },
+    "motherFatherMother": {
+      "type": "string",
+      "required": true
+    },
+    "motherFatherFather": {
+      "type": "string",
+      "required": true
+    },
+    "motherMotherFather": {
+      "type": "string",
+      "required": true
+    },
+    "fatherFatherMother": {
+      "type": "string",
+      "required": true
+    },
+    "fatherMotherMother": {
+      "type": "string",
+      "required": true
+    },
+    "fatherMotherFather": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

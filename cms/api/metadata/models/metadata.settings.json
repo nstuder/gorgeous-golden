@@ -1,0 +1,46 @@
+{
+  "kind": "singleType",
+  "collectionName": "metadata",
+  "info": {
+    "name": "Metadata",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "defaultDescription": {
+      "type": "text",
+      "required": true,
+      "default": "Beschreibung"
+    },
+    "author": {
+      "type": "string",
+      "required": true,
+      "default": "Author"
+    },
+    "keywords": {
+      "type": "string",
+      "default": "keywords",
+      "required": true
+    },
+    "siteUrl": {
+      "type": "string",
+      "default": "siteUrl",
+      "required": true
+    },
+    "defaultTitle": {
+      "type": "string",
+      "default": "title",
+      "required": true
+    },
+    "structuredData": {
+      "type": "text",
+      "required": true,
+      "default": "{}"
+    }
+  }
+}

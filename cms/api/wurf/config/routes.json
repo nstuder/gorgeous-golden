@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/wurfs",
+      "handler": "wurf.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/wurfs/count",
+      "handler": "wurf.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/wurfs/:id",
+      "handler": "wurf.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/wurfs",
+      "handler": "wurf.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/wurfs/:id",
+      "handler": "wurf.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/wurfs/:id",
+      "handler": "wurf.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

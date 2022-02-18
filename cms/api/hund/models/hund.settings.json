@@ -1,0 +1,59 @@
+{
+  "kind": "collectionType",
+  "collectionName": "hunde",
+  "info": {
+    "name": "Hund",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "breedingName": {
+      "type": "string",
+      "required": true
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true,
+      "pluginOptions": {}
+    },
+    "description": {
+      "type": "richtext",
+      "required": true
+    },
+    "gallery": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true,
+      "pluginOptions": {}
+    },
+    "pedigree": {
+      "type": "component",
+      "repeatable": false,
+      "component": "dogs.pedigree",
+      "required": true
+    },
+    "tests": {
+      "type": "richtext",
+      "required": false,
+      "default": ""
+    }
+  }
+}
