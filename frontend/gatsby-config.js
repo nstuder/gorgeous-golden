@@ -3,6 +3,9 @@ require("dotenv").config({
 })
 
 module.exports = {
+  siteMetadata: {
+    siteUrl: `https://gorgeous-golden.de`,
+  },
   plugins: [
     {
       resolve: `gatsby-plugin-sass`,

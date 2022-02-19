@@ -28,12 +28,12 @@ const Footer = () => {
   return (
     <footer>
       <div
-        className={`grid grid-cols-${data.allStrapiClubs.edges.length} items-center justify-items-center bg-gray-400 px-2 sm:px-6 lg:px-8 p-5 text-black`}
+        className='flex flex-wrap justify-evenly items-center bg-gray-400 px-2 sm:px-6 lg:px-8 p-5 text-black'
       >
         {data.allStrapiClubs.edges.map(({ node: club }) => (
           <a href={club.link}>
             <GatsbyImage
-              className='w-32'
+              className='lg:w-32 md:w-24 w-16'
               loading='lazy'
               alt={club.name}
               image={club.image.localFile.childImageSharp.gatsbyImageData}
