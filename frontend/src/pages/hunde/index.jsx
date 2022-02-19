@@ -17,6 +17,7 @@ const DogsPage = ({ data }) => {
               <MainDogPicture
                 className='mx-auto'
                 image={dog.image.localFile.childImageSharp.gatsbyImageData}
+                alt={dog.name}
               />
               <h2
                 className='text-4xl text-grey-700 text-center'

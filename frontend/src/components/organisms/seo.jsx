@@ -11,11 +11,12 @@ function Seo({ description, lang = "de", meta = {}, title, image }) {
           defaultDescription
           author
           keywords
+          siteUrl
         }
       }
     `
   )
-  const { defaultTitle, defaultDescription, author, keywords } =
+  const { defaultTitle, defaultDescription, author, keywords, siteUrl } =
     data.strapiMetadata
 
   const metaDescription = description || defaultDescription
@@ -61,6 +62,10 @@ function Seo({ description, lang = "de", meta = {}, title, image }) {
         {
           property: `og:type`,
           content: `website`,
+        },
+        {
+          property: `og:url`,
+          content: siteUrl,
         },
         {
           property: `og:image`,
