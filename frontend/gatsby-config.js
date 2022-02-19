@@ -7,6 +7,7 @@ module.exports = {
     siteUrl: `https://gorgeous-golden.de`,
   },
   plugins: [
+    `gatsby-plugin-preact`,
     {
       resolve: `gatsby-plugin-sass`,
       options: {
