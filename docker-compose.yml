@@ -15,8 +15,8 @@ services:
       - mariadb
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.gorgeous-golden.rule=Host(`dev.gorgeous-golden.de`)"
-      - "traefik.http.routers.gorgeous-golden.entrypoints=web"
+      - "traefik.http.routers.gorgeous.rule=Host(`dev.gorgeous-golden.de`)"
+      - "traefik.http.routers.gorgeous.entrypoints=web"
     networks:
       - default
       - traefik
