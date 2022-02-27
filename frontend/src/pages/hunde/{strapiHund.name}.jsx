@@ -24,7 +24,7 @@ const DogPage = ({ data }) => {
             alt={dog.name}
           />
           <div>
-            <h1 className='bold text-4xl mb-5 text-center italic'>
+            <h1 className='bold text-4xl mb-5 italic'>
               {dog.name}
             </h1>
             <ReactMarkdown className='prose max-w-none p-2'>

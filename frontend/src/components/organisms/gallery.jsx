@@ -6,7 +6,7 @@ const Gallery = ({ images }) => {
     <div className='mt-8'>
       <h2 className='bold text-4xl mb-5 text-center italic'>Galerie</h2>
 
-      <div className='grid items-center md:grid-cols-2 lg:grid-cols-3 bg-gray-400 md:p-5 md:gap-3 p-1 flex-wrap'>
+      <div className='grid items-center md:grid-cols-2 lg:grid-cols-3 bg-gray-400 md:p-5 md:gap-3 p-1'>
         {images.map(
           ({
             localFile: {
@@ -18,7 +18,7 @@ const Gallery = ({ images }) => {
                 loading='lazy'
                 className='mx-auto max-w-screen-lg my-6 shadow-lg'
                 alt={""}
-                objectFit="contain"
+                objectFit='contain'
                 image={gatsbyImageData}
               />
             </div>
