@@ -16,7 +16,7 @@ const DogPage = ({ data }) => {
         image={dog.image.url}
         description={dog.description}
       />
-      <Layout title={dog.breedingName} full='true'>
+      <Layout title={dog.breedingName} full='true' center={false}>
         <div className='mt-5 grid md:grid-cols-2 grid-cols-1 lg:grid-cols-2 gap-20 container mx-auto'>
           <MainDogPicture
             className='mx-auto'

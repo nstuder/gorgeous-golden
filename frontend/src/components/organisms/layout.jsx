@@ -5,20 +5,23 @@ import Logo from "../../images/logos/Logo.svg"
 import { Headline } from "../atoms/Headline"
 import { GatsbyImage } from "gatsby-plugin-image"
 
-const Layout = ({ children, title, image, logo, full }) => {
+const Layout = ({ children, title, image, logo, full, center = true }) => {
   return (
     <>
       <Nav />
       <header
         className={
           image
-            ? "grid sm:grid-cols-2 grid-cols-1"
-            : "grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1"
+            ? "grid sm:grid-cols-2 grid-cols-1 relative"
+            : "grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 relative"
         }
       >
-        <img className='' src={logo ? logo : Logo} alt='Logo' loading='lazy' />
+        <img src={logo ? logo : Logo} alt='Logo' loading='lazy' />
         {title ? (
-          <div className='flex justify-center items-center md:col-span-2 lg:col-span-3'>
+          <div
+            className={`flex justify-center items-center md:col-span-2 lg:col-span-3 
+              ${center ? " lg:absolute w-full h-full" : ""}`}
+          >
             <Headline>{title}</Headline>
           </div>
         ) : null}
