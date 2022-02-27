@@ -1,35 +1,59 @@
 import { GatsbyImage } from "gatsby-plugin-image"
 import React from "react"
 
-export const Pedigree = ({pedigree}) => (
+export const Pedigree = ({ pedigree }) => (
   <>
     <h3 className='text-4xl italic text-center my-8'>Ahnentafel</h3>
     <div className='grid md:grid-cols-6 gap-5'>
       {pedigree.motherImg && pedigree.fatherImg ? (
         <div className='md:col-span-2'>
           <div className='md:p-5 p-1'>
-            <GatsbyImage
-              className='shadow-lg'
-              image={pedigree.fatherImg.localFile.childImageSharp.gatsbyImageData}
-              alt={pedigree.father}
-              loading='lazy'
-            />
-            <h3 className='italic text-2xl text-center mt-2'>{pedigree.father}</h3>
+            {pedigree.fatherImg.localFile ? (
+              <GatsbyImage
+                className='shadow-lg'
+                image={
+                  pedigree.fatherImg.localFile.childImageSharp.gatsbyImageData
+                }
+                alt={pedigree.father}
+                loading='lazy'
+              />
+            ) : (
+              <img
+                className='shadow-lg'
+                loading='lazy'
+                src={pedigree.fatherImg.url}
+                alt={pedigree.mother || "Image"}
+              />
+            )}
+            <h3 className='italic text-2xl text-center mt-2'>
+              {pedigree.father}
+            </h3>
           </div>
           <div className='md:p-5 p-1'>
-            <GatsbyImage
-              className='shadow-lg'
-              image={pedigree.motherImg.localFile.childImageSharp.gatsbyImageData}
-              alt={pedigree.mother}
-              loading='lazy'
-            />
-            <h3 className='italic text-2xl text-center mt-2'>{pedigree.mother}</h3>
+            {pedigree.motherImg.localFile ? (
+              <GatsbyImage
+                className='shadow-lg'
+                image={
+                  pedigree.motherImg.localFile.childImageSharp.gatsbyImageData
+                }
+                alt={pedigree.mother}
+                loading='lazy'
+              />
+            ) : (
+              <img
+                className='shadow-lg'
+                loading='lazy'
+                src={pedigree.motherImg.url}
+                alt={pedigree.mother || "Image"}
+              />
+            )}
+            <h3 className='italic text-2xl text-center mt-2'>
+              {pedigree.mother}
+            </h3>
           </div>
         </div>
       ) : null}
-      <div
-        className="md:col-span-4 md:row-span-2"
-      >
+      <div className='md:col-span-4 md:row-span-2'>
         <table className='min-w-full divide-y divide-gray-200 h-full text-center mt-3'>
           <thead>
             <tr>
