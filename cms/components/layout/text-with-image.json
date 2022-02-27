@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_layout_text_with_images",
+  "info": {
+    "name": "TextWithImage",
+    "icon": "audio-description",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "richtext",
+      "required": true
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true,
+      "pluginOptions": {}
+    },
+    "isRight": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    }
+  }
+}
