@@ -2,12 +2,12 @@ import React from "react"
 import { Markdown } from "../molecules/markdown"
 
 export const TextWithImage = ({ image, isRight, text }) => (
-  <div className='grid lg:grid-cols-2'>
+  <div className='grid lg:grid-cols-2 gap-2'>
     {isRight ? (
       <>
         <Markdown>{text}</Markdown>
         <img
-          className='lg:m-3 shadow-lg'
+          className='shadow-lg'
           loading='lazy'
           src={image.url}
           alt={image.alternativeText || "Image"}
@@ -16,7 +16,7 @@ export const TextWithImage = ({ image, isRight, text }) => (
     ) : (
       <>
         <img
-          className='lg:m-3 shadow-lg'
+          className='shadow-lg'
           loading='lazy'
           src={image.url}
           alt={image.alternativeText || "Image"}
