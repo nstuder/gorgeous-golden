@@ -10,7 +10,6 @@ export const NavLink = (props) => {
       activeStyle={{
         color: "white",
       }}
-      aria-current={props.item.current ? "page" : undefined}
     >
       {props.item.name}
     </Link>
