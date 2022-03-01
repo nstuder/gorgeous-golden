@@ -2,7 +2,7 @@ import * as React from "react"
 import Layout from "../components/organisms/layout"
 import { graphql } from "gatsby"
 import Seo from "../components/organisms/seo"
-import { ContenBlock } from "../components/organisms/content-block"
+import { ContentBlock } from "../components/organisms/content-block"
 
 const PlanPage = ({ data }) => {
   const planData = data.strapiWurfplanung
@@ -11,7 +11,7 @@ const PlanPage = ({ data }) => {
     <>
       <Seo title={"Wurfplanung"} />
       <Layout title={"Wurfplanung"}>
-        <ContenBlock content={planData.content}/>
+        <ContentBlock content={planData.content}/>
       </Layout>
     </>
   )

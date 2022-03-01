@@ -4,7 +4,7 @@ import { Markdown } from "../molecules/markdown"
 import { TextWithImage } from "../molecules/text-with-image"
 import { Pedigree } from "./pedigree"
 
-export const ContenBlock = ({ content }) => (
+export const ContentBlock = ({ content }) => (
   <>
     {content.map((item) => {
       switch (item.strapi_component) {

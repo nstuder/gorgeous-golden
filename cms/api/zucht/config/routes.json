@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/zuchts",
+      "handler": "zucht.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/zuchts/count",
+      "handler": "zucht.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/zuchts/:id",
+      "handler": "zucht.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/zuchts",
+      "handler": "zucht.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/zuchts/:id",
+      "handler": "zucht.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/zuchts/:id",
+      "handler": "zucht.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

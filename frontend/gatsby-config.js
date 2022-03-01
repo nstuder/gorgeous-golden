@@ -64,6 +64,10 @@ module.exports = {
             name: `aktuelles`,
             endpoint: `aktuelles`,
           },
+          {
+            name: `zucht`,
+            endpoint: `zuchts`,
+          },
         ],
         singleTypes: [
           `footer`,

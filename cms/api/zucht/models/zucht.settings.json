@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "zuchts",
+  "info": {
+    "name": "Zucht"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "content": {
+      "type": "dynamiczone",
+      "components": [
+        "layout.images",
+        "layout.text-with-image",
+        "layout.text"
+      ],
+      "required": true
+    }
+  }
+}
