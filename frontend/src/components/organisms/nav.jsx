@@ -1,6 +1,7 @@
 import React from "react"
 import { Disclosure } from "@headlessui/react"
 import MobileMenuButton from "../atoms/nav/mobile-menu-button"
+import { useStaticQuery, graphql } from "gatsby"
 import { NavList } from "../molecules/nav/nav-list"
 import { MobileNavList } from "../molecules/nav/mobile-nav-list"
 
@@ -11,8 +12,8 @@ const navigation = [
   { name: "Hunde", href: "/hunde/", current: false },
   {
     name: "Zucht",
-    href: "/zucht",
-    content: [{ name: "Aufzucht", href: "/aufzucht/", current: false }],
+    href: "/zucht/",
+    content: [],
   },
   // { name: "Würfe", href: "/wuerfe/", current: false },
   { name: "Wurfplanung", href: "/wurfplanung/", current: false },
@@ -20,6 +21,21 @@ const navigation = [
 ]
 
 const Nav = () => {
+  const data = useStaticQuery(graphql`
+    query NavigationQuery {
+      allStrapiZucht {
+        edges {
+          node {
+            name
+          }
+        }
+      }
+    }
+  `)
+  navigation[4].content = data.allStrapiZucht.edges.map(({ node: item }) => ({
+    name: item.name,
+    href: item.name.toLowerCase() + "/",
+  }))
   return (
     <Disclosure
       as='nav'
