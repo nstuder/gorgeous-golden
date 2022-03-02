@@ -17,6 +17,8 @@ services:
       - "traefik.enable=true"
       - "traefik.http.routers.gorgeous.rule=Host(`dev.gorgeous-golden.de`)"
       - "traefik.http.routers.gorgeous.entrypoints=web"
+      - "traefik.http.middlewares.test-compress.compress=true"
+      - "traefik.http.middlewares.test-http-cache.plugin.httpCache.maxTtl=300"
     networks:
       - default
       - traefik
