@@ -16,7 +16,7 @@ const DogsPage = ({ data }) => {
             <Link to={`/hunde/${dog.name.toLowerCase()}/`}>
               <MainDogPicture
                 className='mx-auto'
-                image={dog.image.localFile.childImageSharp.gatsbyImageData}
+                image={dog.image}
                 alt={dog.name}
               />
               <h2
@@ -44,6 +44,8 @@ export const query = graphql`
           breedingName
           name
           image {
+            width
+            height
             localFile {
               childImageSharp {
                 gatsbyImageData(layout: FULL_WIDTH)

@@ -8,18 +8,16 @@ const Gallery = ({ images }) => {
 
       <div className='grid items-center md:grid-cols-2 lg:grid-cols-3 bg-gray-400 md:p-5 md:gap-3 p-1'>
         {images.map(
-          ({
-            localFile: {
-              childImageSharp: { gatsbyImageData },
-            },
-          }) => (
+          (image) => (
             <div className='w-full '>
               <GatsbyImage
                 loading='lazy'
                 className='mx-auto max-w-screen-lg my-6 shadow-lg'
                 alt={""}
                 objectFit='contain'
-                image={gatsbyImageData}
+                width={image.width}
+                height={image.height}
+                image={image.localFile.childImageSharp.gatsbyImageData}
               />
             </div>
           )

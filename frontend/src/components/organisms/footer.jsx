@@ -14,6 +14,8 @@ const Footer = () => {
             name
             link
             image {
+              height
+              width
               localFile {
                 childImageSharp {
                   gatsbyImageData(layout: FULL_WIDTH)
@@ -36,6 +38,8 @@ const Footer = () => {
               className='lg:w-32 md:w-24 w-16'
               loading='lazy'
               alt={club.name}
+              width={club.image.width}
+              height={club.image.height}
               image={club.image.localFile.childImageSharp.gatsbyImageData}
             />
           </a>

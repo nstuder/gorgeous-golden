@@ -20,7 +20,7 @@ const DogPage = ({ data }) => {
         <div className='mt-5 grid md:grid-cols-2 grid-cols-1 lg:grid-cols-2 gap-20 container mx-auto'>
           <MainDogPicture
             className='mx-auto'
-            image={dog.image.localFile.childImageSharp.gatsbyImageData}
+            image={dog.image}
             alt={dog.name}
           />
           <div>
@@ -55,6 +55,8 @@ export const query = graphql`
       description
       tests
       gallery {
+        width
+        height
         localFile {
           childImageSharp {
             gatsbyImageData(layout: CONSTRAINED)
@@ -63,6 +65,8 @@ export const query = graphql`
       }
       image {
         url
+        width
+        height
         localFile {
           childImageSharp {
             gatsbyImageData(layout: FULL_WIDTH)
@@ -75,6 +79,8 @@ export const query = graphql`
         fatherFatherFather
         fatherFatherMother
         fatherImg {
+          width
+          height
           localFile {
             childImageSharp {
               gatsbyImageData(layout: FULL_WIDTH)
@@ -89,6 +95,8 @@ export const query = graphql`
         motherFatherFather
         motherFatherMother
         motherImg {
+          width
+          height
           localFile {
             childImageSharp {
               gatsbyImageData(layout: FULL_WIDTH)

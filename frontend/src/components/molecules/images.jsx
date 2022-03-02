@@ -9,6 +9,8 @@ const Images = ({ images }) => {
           className='shadow-lg'
           loading='lazy'
           src={image.url}
+          width={image.width}
+          height={image.height}
           alt={image.alternativeText || "Image"}
         />
         </div>

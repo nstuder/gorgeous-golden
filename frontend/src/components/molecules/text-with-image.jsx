@@ -10,6 +10,8 @@ export const TextWithImage = ({ image, isRight, text }) => (
           className='shadow-lg'
           loading='lazy'
           src={image.url}
+          width={image.width}
+          height={image.height}
           alt={image.alternativeText || "Image"}
         />
       </>
@@ -19,6 +21,8 @@ export const TextWithImage = ({ image, isRight, text }) => (
           className='shadow-lg'
           loading='lazy'
           src={image.url}
+          width={image.width}
+          height={image.height}
           alt={image.alternativeText || "Image"}
         />
         <Markdown>{text}</Markdown>

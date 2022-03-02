@@ -8,7 +8,9 @@ export const MainDogPicture = ({ image, alt = "Image" }) => (
       className='block w-full h-full relative top-0 left-0 z-10 shadow-sm'
       loading='lazy'
       alt={alt}
-      image={image}
+      width={image.width}
+      height={image.height}
+      image={image.localFile.childImageSharp.gatsbyImageData}
     />
     {/* <div className='bg-gray-100 block w-full h-full absolute top-0 left-0 z-10 shadow-sm'></div> */}
   </div>

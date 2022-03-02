@@ -16,7 +16,13 @@ const Layout = ({ children, title, image, logo, full, center = true }) => {
             : "grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 relative"
         }
       >
-        <img src={logo ? logo : Logo} alt='Logo' loading='lazy' />
+        <img
+          className='w-full h-auto'
+          src={logo ? logo.localFile.publicURL : Logo}
+          width={logo?.width || 297}
+          height={logo?.height || 257}
+          alt='Logo'
+        />
         {title ? (
           <div
             className={`flex justify-center items-center md:col-span-2 lg:col-span-3 
@@ -28,9 +34,10 @@ const Layout = ({ children, title, image, logo, full, center = true }) => {
         {image ? (
           <GatsbyImage
             className='max-h-screen'
-            loading='lazy'
             alt={"Home"}
-            image={image}
+            width={image.width}
+            height={image.height}
+            image={image.localFile.childImageSharp.gatsbyImageData}
           />
         ) : null}
       </header>

@@ -12,8 +12,8 @@ const IndexPage = ({ data }) => {
       <Seo title={"Home"} image={homeData.image.url} />
       <LocalBusiness/>
       <Layout
-        image={homeData.image.localFile.childImageSharp.gatsbyImageData}
-        logo={homeData.logo.localFile.publicURL}
+        image={homeData.image}
+        logo={homeData.logo}
       >
         <div>Golden Retriver Zucht</div>
       </Layout>
@@ -26,6 +26,8 @@ export const query = graphql`
     strapiHome {
       image {
         url
+        height
+        width
         localFile {
           childImageSharp {
             gatsbyImageData(layout: FULL_WIDTH)
@@ -33,6 +35,8 @@ export const query = graphql`
         }
       }
       logo {
+        height
+        width
         localFile {
           publicURL
         }

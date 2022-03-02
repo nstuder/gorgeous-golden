@@ -14,6 +14,8 @@ export const Pedigree = ({ pedigree }) => (
                 image={
                   pedigree.fatherImg.localFile.childImageSharp.gatsbyImageData
                 }
+                width={pedigree.fatherImg.width}
+                height={pedigree.fatherImg.height}
                 alt={pedigree.father}
                 loading='lazy'
               />
@@ -22,7 +24,9 @@ export const Pedigree = ({ pedigree }) => (
                 className='shadow-lg'
                 loading='lazy'
                 src={pedigree.fatherImg.url}
-                alt={pedigree.mother || "Image"}
+                width={pedigree.fatherImg.width}
+                height={pedigree.fatherImg.height}
+                alt={pedigree.father || "Image"}
               />
             )}
             <h3 className='italic text-2xl text-center mt-2'>
@@ -36,6 +40,8 @@ export const Pedigree = ({ pedigree }) => (
                 image={
                   pedigree.motherImg.localFile.childImageSharp.gatsbyImageData
                 }
+                width={pedigree.motherImg.width}
+                height={pedigree.motherImg.height}
                 alt={pedigree.mother}
                 loading='lazy'
               />
@@ -44,6 +50,8 @@ export const Pedigree = ({ pedigree }) => (
                 className='shadow-lg'
                 loading='lazy'
                 src={pedigree.motherImg.url}
+                width={pedigree.motherImg.width}
+                height={pedigree.motherImg.height}
                 alt={pedigree.mother || "Image"}
               />
             )}
