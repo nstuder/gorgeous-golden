@@ -17,6 +17,7 @@ const navigation = [
   },
   // { name: "Würfe", href: "/wuerfe/", current: false },
   { name: "Wurfplanung", href: "/wurfplanung/", current: false },
+  { name: "Galerie", href: "/galerie/", current: false },
   { name: "Kontakt", href: "/kontakt/", current: false },
 ]
 

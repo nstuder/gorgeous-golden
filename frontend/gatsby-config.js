@@ -68,6 +68,10 @@ module.exports = {
             name: `zucht`,
             endpoint: `zuchts`,
           },
+          {
+            name: `galerie`,
+            endpoint: `galeries`,
+          },
         ],
         singleTypes: [
           `footer`,
