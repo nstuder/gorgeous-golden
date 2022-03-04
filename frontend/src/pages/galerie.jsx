@@ -10,7 +10,7 @@ const GaleriePage = ({ data }) => {
   return (
     <>
       <Seo title={"Galerie"} />
-      <Layout title={"Galerie"}>
+      <Layout title={"Galerie"} full={true}>
         {galerieData.map(({node}) => <Images images={node.images}/>)}
       </Layout>
     </>

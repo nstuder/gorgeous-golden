@@ -22,12 +22,17 @@ module.exports = {
     "gatsby-plugin-image",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sitemap",
-    /*{
+    {
       resolve: "gatsby-plugin-manifest",
       options: {
-        icon: "src/images/icon.png",
+          name: `Gorgeous Golden from Gutach - Golden Retriever Zucht`,
+          short_name: `Gorgeous Golden`,
+          start_url: `/`,
+          theme_color: `rgba(156, 163, 175, 1.0)`,
+          display: `minimal-ui`,
+          icon: `src/images/logo.svg`, // This path is relative to the root of the site.
       },
-    },*/
+    },
     {
       resolve: `gatsby-plugin-sharp`,
       options: {
