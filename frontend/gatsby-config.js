@@ -30,7 +30,7 @@ module.exports = {
           start_url: `/`,
           theme_color: `rgba(156, 163, 175, 1.0)`,
           display: `minimal-ui`,
-          icon: `src/images/logo.svg`, // This path is relative to the root of the site.
+          icon: `src/images/logos/Logo.svg`, // This path is relative to the root of the site.
       },
     },
     {
