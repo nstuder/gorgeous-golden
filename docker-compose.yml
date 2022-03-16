@@ -18,6 +18,7 @@ services:
       - "traefik.http.routers.gorgeous.rule=Host(`dev.gorgeous-golden.de`)"
       - "traefik.http.routers.gorgeous.entrypoints=web, websecure"
       - "traefik.http.routers.gorgeous.tls=true"
+      - "traefik.http.routers.gorgeous.tls.certresolver=myresolver"
       - "traefik.http.middlewares.test-compress.compress=true"
       - "traefik.http.middlewares.test-http-cache.plugin.httpCache.maxTtl=300"
     networks:
