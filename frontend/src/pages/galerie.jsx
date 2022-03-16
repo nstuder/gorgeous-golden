@@ -2,7 +2,7 @@ import * as React from "react"
 import Layout from "../components/organisms/layout"
 import { graphql } from "gatsby"
 import Seo from "../components/organisms/seo"
-import Images from "../components/molecules/images"
+import MediaList from "../components/molecules/media-list"
 
 const GaleriePage = ({ data }) => {
   const galerieData = data.allStrapiGalerie.edges
@@ -11,7 +11,7 @@ const GaleriePage = ({ data }) => {
     <>
       <Seo title={"Galerie"} />
       <Layout title={"Galerie"} full={true}>
-        {galerieData.map(({node}) => <Images images={node.images}/>)}
+        {galerieData.map(({node}) => <MediaList list={node.images}/>)}
       </Layout>
     </>
   )
@@ -26,7 +26,9 @@ export const query = graphql`
           images {
             width
             height
+            mime
             localFile {
+              publicURL
               childImageSharp {
                 gatsbyImageData(layout: CONSTRAINED)
               }

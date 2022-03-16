@@ -1,5 +1,5 @@
 import React from "react"
-import Images from "../molecules/images"
+import MediaList from "../molecules/media-list"
 import { Markdown } from "../molecules/markdown"
 import { TextWithImage } from "../molecules/text-with-image"
 import { Pedigree } from "./pedigree"
@@ -19,7 +19,7 @@ export const ContentBlock = ({ content }) => (
             />
           )
         case "layout.images":
-          return <Images images={item.images} />
+          return <MediaList list={item.images} />
           case "dogs.pedigree":
             return <Pedigree pedigree={item}/>
         default:
