@@ -4,6 +4,7 @@ version: '3'
 services:
   gorgeous-golden:
     image: backend
+    container_name: gorgeous-golden-backend
     restart: always
     env_file:
       - .env
@@ -15,7 +16,7 @@ services:
       - mariadb
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.gorgeous.rule=Host(`dev.gorgeous-golden.de`)"
+      - "traefik.http.routers.gorgeous.rule=Host(`gorgeous-golden.de`)"
       - "traefik.http.routers.gorgeous.entrypoints=web, websecure"
       - "traefik.http.routers.gorgeous.tls=true"
       - "traefik.http.routers.gorgeous.tls.certresolver=myresolver"
@@ -27,6 +28,7 @@ services:
 
   mariadb:
     image: mariadb
+    container_name: gorgeous-golden-db
     restart: always
     volumes:
       - mysqldbvolume:/var/lib/mysql

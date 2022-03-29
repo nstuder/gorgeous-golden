@@ -12,6 +12,5 @@ export const MainDogPicture = ({ image, alt = "Image" }) => (
       height={image.height}
       image={image.localFile.childImageSharp.gatsbyImageData}
     />
-    {/* <div className='bg-gray-100 block w-full h-full absolute top-0 left-0 z-10 shadow-sm'></div> */}
   </div>
 )

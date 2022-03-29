@@ -17,7 +17,7 @@ const DogPage = ({ data }) => {
         description={dog.description}
       />
       <Layout title={dog.breedingName} full='true' center={false}>
-        <div className='mt-5 grid md:grid-cols-2 grid-cols-1 lg:grid-cols-2 gap-20 container mx-auto'>
+        <div className='mt-5 grid md:grid-cols-2 grid-cols-1 lg:grid-cols-2 gap-20 container mx-auto items-center'>
           <MainDogPicture
             className='mx-auto'
             image={dog.image}
@@ -34,7 +34,7 @@ const DogPage = ({ data }) => {
         </div>
         <Pedigree pedigree={dog.pedigree} />
         {dog.tests ? (
-          <div>
+          <div className="container mx-auto">
             <h3 className='text-4xl italic text-center my-8'>Prüfungen</h3>
             <ReactMarkdown className='prose max-w-none p-2'>
               {dog.tests}
