@@ -1,9 +1,9 @@
 import { GatsbyImage } from "gatsby-plugin-image/dist/gatsby-image"
 import React from "react"
 
-const MediaList = ({ list }) => {
+const MediaList = ({ list, className }) => {
   return (
-    <div className='flex flex-wrap items-center my-2'>
+    <div className={`flex flex-wrap items-center my-2 ${className}`}>
       {list.map((media) => (
         <div className='mx-auto xl:w-1/3 lg:w-1/2 w-full p-1'>
           {media.mime.includes("video") ? (

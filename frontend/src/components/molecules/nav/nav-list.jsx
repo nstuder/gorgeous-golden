@@ -2,7 +2,7 @@ import React from "react"
 import { Dropdown } from "./dropdown"
 import { NavLink } from "../../atoms/nav/nav-link"
 
-export const NavList = ({ items }) => {
+export const NavList = ({ items, children}) => {
   return (
     <div className='hidden sm:block sm:ml-6'>
       <div className='flex space-x-4'>
@@ -13,6 +13,7 @@ export const NavList = ({ items }) => {
             return <NavLink key={item.name} item={item}></NavLink>
           }
         })}
+        {children}
       </div>
     </div>
   )

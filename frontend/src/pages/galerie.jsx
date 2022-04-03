@@ -11,7 +11,9 @@ const GaleriePage = ({ data }) => {
     <>
       <Seo title={"Galerie"} />
       <Layout title={"Galerie"} full={true}>
-        {galerieData.map(({node}) => <MediaList list={node.images}/>)}
+        {galerieData.map(({ node }) => (
+          <MediaList className="bg-gray-400" list={node.images} />
+        ))}
       </Layout>
     </>
   )

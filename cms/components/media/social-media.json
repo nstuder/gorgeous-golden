@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_media_social_medias",
+  "info": {
+    "name": "socialMedia",
+    "icon": "battery-half"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "logo": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true,
+      "pluginOptions": {}
+    },
+    "link": {
+      "type": "string"
+    }
+  }
+}

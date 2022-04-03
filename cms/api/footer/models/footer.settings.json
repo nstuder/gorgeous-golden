@@ -15,6 +15,12 @@
     "Copyright": {
       "type": "string",
       "required": true
+    },
+    "socialMedia": {
+      "type": "dynamiczone",
+      "components": [
+        "media.social-media"
+      ]
     }
   }
 }

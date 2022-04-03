@@ -4,6 +4,7 @@ import MobileMenuButton from "../atoms/nav/mobile-menu-button"
 import { useStaticQuery, graphql } from "gatsby"
 import { NavList } from "../molecules/nav/nav-list"
 import { MobileNavList } from "../molecules/nav/mobile-nav-list"
+import { SocialMediaLink } from "../atoms/SocialMediaLink"
 
 const navigation = [
   { name: "Home", href: "/", current: true },
@@ -31,6 +32,9 @@ const Nav = () => {
           }
         }
       }
+      strapiFooter {
+        socialMedia
+      }
     }
   `)
   navigation[4].content = data.allStrapiZucht.edges.map(({ node: item }) => ({
@@ -52,7 +56,13 @@ const Nav = () => {
               </div>
               <div className='flex-1 flex items-center justify-center sm:items-stretch'>
                 {/* <NavBrand>Gorgeous Golden</NavBrand> */}
-                <NavList items={navigation} />
+                <NavList items={navigation} >
+                {data.strapiFooter.socialMedia.map((socialMedia) => (
+                  <div className='w-5 py-2'>
+                    <SocialMediaLink socialMedia={socialMedia} />
+                  </div>
+                ))}
+                </NavList>
               </div>
             </div>
           </div>
