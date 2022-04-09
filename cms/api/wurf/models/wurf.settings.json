@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "wurf",
   "info": {
-    "name": "Wurf"
+    "name": "Wurf",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -11,8 +12,37 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "Title": {
-      "type": "string"
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "richtext",
+      "required": true
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true,
+      "pluginOptions": {}
+    },
+    "pedigree": {
+      "type": "component",
+      "repeatable": false,
+      "component": "dogs.pedigree",
+      "required": true
+    },
+    "content": {
+      "type": "dynamiczone",
+      "components": [
+        "layout.images",
+        "layout.text-with-image",
+        "layout.text"
+      ]
     }
   }
 }

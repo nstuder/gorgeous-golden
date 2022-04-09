@@ -4,8 +4,12 @@ import { Markdown } from "../molecules/markdown"
 import { TextWithImage } from "../molecules/text-with-image"
 import { Pedigree } from "./pedigree"
 
-export const ContentBlock = ({ content }) => (
-  <>
+export const ContentBlock = ({ content, reverse=false }) => {
+  if(reverse) {
+    content = content.reverse();
+  }
+
+  return <>
     {content.map((item) => {
       switch (item.strapi_component) {
         case "layout.text":
@@ -27,4 +31,4 @@ export const ContentBlock = ({ content }) => (
       }
     })}
   </>
-)
+}

@@ -77,6 +77,10 @@ module.exports = {
             name: `galerie`,
             endpoint: `galeries`,
           },
+          {
+            name: `wurfs`,
+            endpoint: `wurfs`,
+          },
         ],
         singleTypes: [
           `footer`,
