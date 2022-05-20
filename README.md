@@ -1,4 +1,4 @@
-# Official Website www.gorgeous-golden.de
+# Official Website gorgeous-golden.de
 
 Static Website using Gatsby.js and Strapi as CMS
 
