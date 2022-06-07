@@ -16,8 +16,12 @@ const navigation = [
     href: "/zucht/",
     content: [],
   },
-  // { name: "Würfe", href: "/wuerfe/", current: false },
   { name: "Wurfplanung", href: "/wurfplanung/", current: false },
+  {
+    name: "Würfe",
+    href: "/wuerfe/",
+    content: [],
+  },
   { name: "Galerie", href: "/galerie/", current: false },
   { name: "Kontakt", href: "/kontakt/", current: false },
 ]
@@ -32,15 +36,29 @@ const Nav = () => {
           }
         }
       }
+      allStrapiWurfs {
+        edges {
+          node {
+            name
+          }
+        }
+      }
       strapiFooter {
         socialMedia
       }
     }
   `)
+  
   navigation[4].content = data.allStrapiZucht.edges.map(({ node: item }) => ({
     name: item.name,
     href: item.name.toLowerCase() + "/",
   }))
+
+  navigation[6].content = data.allStrapiWurfs.edges.map(({ node: item }) => ({
+    name: item.name,
+    href: item.name.toLowerCase() + "/",
+  }))
+
   return (
     <Disclosure
       as='nav'
