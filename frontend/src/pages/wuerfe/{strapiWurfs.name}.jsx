@@ -31,7 +31,7 @@ const WurfPage = ({ data }) => {
         </div>
         <Pedigree pedigree={wurf.pedigree} />
         <div className="container mx-auto">
-          <ContentBlock content={wurf.content} reverse={true}/>
+          <ContentBlock content={wurf.content} reverse={false}/>
         </div>
       </Layout>
     </>
